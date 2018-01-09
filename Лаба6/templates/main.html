@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body2 %}
+    {% load static %}
+
+    <div class="col-lg-4">
+        <a href="{% url 'concerts' 1 %}"><img src="{% static "Bootstrap/img/bmth.png" %}" width="1320" height="500" alt="Bring Me The Horizon"/></a>
+        <br><br>
+        <a href="{% url 'concerts' 2 %}"><img src="{% static "Bootstrap/img/crown_the_empire.jpg" %}" width="1320" height="500" alt="Crown The Empire"/></a>
+        <br><br>
+    </div>
+{% endblock %}
+
