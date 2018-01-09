@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Machine</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'Bootstrap/js/bootstrap.min.js' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'Bootstrap/js/bootstrap.min.js' %}"></script>
+    <link rel="icon" href="{% static 'Bootstrap/img/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'Bootstrap/img/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+          <a class="navbar-brand" href="{% url 'main' %}"><img alt="Brand" src="{% static '/Bootstrap/img/logo.png' %}" width="100" height="60"></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'main' %}">HOME</a></li>
+          <li><a href="{% url 'tickets_url' %}">TICKETS</a></li>
+          <li><a href="{% url 'orders' %}">БД</a></li>
+            <li>
+            {% if request.user.is_authenticated %}
+                <li><a href="{% url 'logout_url' %}">Выйти</a></li>
+                <li><a>{{ request.user.username }}</a></li>
+                {% else %}
+                <li><a href="{% url 'auth_url' %}">Вход</a></li>
+                <li><a href="{% url 'registration_url' %}">Регистрация</a></li>
+{#                                    <a href="{% url 'registration2_url' %}">Регистрация2</a>#}
+                {% endif %}
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="{% static 'Bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+    {% block body1 %} {% endblock %}
+
+    {% block body2 %} {% endblock %}
+
+</body>
+</html>
