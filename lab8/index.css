@@ -1,0 +1,86 @@
+.body1 {
+    vertical-align: top;
+    margin: 0;
+    width: 49%;
+    display: inline-block;
+    text-align: right;
+}
+
+.body2 {
+    vertical-align: top;
+    margin: 0;
+    width: 10%;
+    display: inline-block;
+    text-align: left;
+}
+
+.body1 p {
+    width: 100%;
+    margin: 1px;
+    height: 22px;
+}
+
+.body2 p {
+    width: 100%;
+    margin: 0px;
+    height: 22px;
+}
+
+input {
+    float: right;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    float: right;
+    border-color: grey;
+    background-color: lightslategrey;
+    border-radius: 2px;
+    color: white;
+}
+
+#canvas {
+    border: solid;
+    border-width: 1px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center p{
+    margin: 0px;
+    padding-right: 3px;
+}
+
+.py1, .py2, .py3, .py4, .py5 {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.coordinates_y {
+    width: 6%;
+}
+
+.px1, .px2, .px3, .px4, .px5 {
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+}
+
+.coordinates_x {
+    width: 94%;
+    margin-left: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -47px;
+}
